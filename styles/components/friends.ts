@@ -31,5 +31,10 @@ export const friends = StyleSheet.create({
     },
     text: {
         fontSize: 16,
+    },
+    nofriends: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
     }
 })

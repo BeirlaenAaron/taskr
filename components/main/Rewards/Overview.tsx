@@ -108,6 +108,23 @@ function Overview(props, { navigation }) {
         )
     )
 
+    if (Object.keys(rewards).length === 0) {
+        return (
+            <SafeAreaView style={[shop.norewards]}>
+                <Text style={[shop.points, text.theme[800], background.accent[200]]}>Points: {rewardPoints}</Text>
+                <View style={[shop.norewards]}>
+                    <Text style={[text.theme[100]]}>Nothing here to offer.</Text>
+                    <Text style={[text.theme[200]]} >No rewards for you today, unlucky!</Text>
+                </View>
+                <TouchableOpacity style={[background.accent[200], shop.addbutton]}
+                    onPress={() => { props.navigation.navigate('Add'); }} >
+                    <MaterialIcons name="add" size={32} style={text.accent[300]} />
+                </TouchableOpacity>
+
+            </SafeAreaView >
+        )
+    }
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <Text style={[shop.points, text.theme[800], background.accent[200]]}>Points: {rewardPoints}</Text>

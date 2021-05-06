@@ -51,4 +51,9 @@ export const shop = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
+    norewards: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    }
 })

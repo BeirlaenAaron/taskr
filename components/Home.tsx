@@ -38,7 +38,6 @@ function Home(props) {
                 props.fetchUser()
                 props.fetchUserFriendRequests()
                 props.fetchUserOtherNotifications()
-                console.log("yes");
             }, []
         )
     )

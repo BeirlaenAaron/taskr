@@ -72,6 +72,19 @@ const List = ({ navigation }: any) => {
         )
     )
 
+    if (Object.keys(userFriends).length === 0) {
+        return (
+            <SafeAreaView style={[friends.nofriends]}>
+                <Text style={[text.theme[100]]}>It's quiet here!</Text>
+                <Text style={[text.theme[200]]} > You have no friends, try adding some.</Text>
+                <TouchableOpacity style={[background.accent[200], friends.addbutton]}
+                    onPress={() => navigation.navigate('Search')}>
+                    <MaterialIcons name="add" size={32} style={text.accent[300]} />
+                </TouchableOpacity>
+            </SafeAreaView >
+        )
+    }
+
     return (
         <SafeAreaView style={{ flex: 1, marginTop: 20 }}>
 

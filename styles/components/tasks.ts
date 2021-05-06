@@ -63,4 +63,9 @@ export const tasks = StyleSheet.create({
     separatorline: {
         flex: 1, height: 1
     },
+    notasks: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    }
 })

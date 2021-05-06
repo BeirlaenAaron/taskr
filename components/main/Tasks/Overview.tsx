@@ -124,6 +124,21 @@ const Overview = ({ navigation }: any) => {
         )
     )
 
+    if (Object.keys(userTasks).length === 0) {
+        return (
+            <SafeAreaView style={[tasks.notasks]}>
+                <Text style={[text.theme[100]]}>You're on track!</Text>
+                <Text style={[text.theme[200]]} > There are no tasks to be completed.</Text>
+                <TouchableOpacity style={[background.accent[200], tasks.addbutton]}
+                    onPress={() => { navigation.navigate('Add'); }} >
+                    <MaterialIcons name="add" size={32} style={text.accent[300]} />
+                </TouchableOpacity>
+            </SafeAreaView >
+        )
+    }
+
+
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <FlatList
